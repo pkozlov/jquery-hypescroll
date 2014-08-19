@@ -1,0 +1,38 @@
+{
+	"name": "hypescroll",
+	"title": "jQuery HypeScroll",
+	"description": "jQuery plugin for Tumult Hype animation on scroll",
+	"keywords": [
+		"jquery",
+		"hypescroll",
+		"scroll",
+		"animation",
+		"plugins"
+	],
+	"version": "0.0.1",
+	"author": {
+		"name": "Pavel Kozlov",
+		"email": "mail@pkozlov.ru",
+		"url": "https://pkozlov.ru/"
+	},
+	"maintainers": [
+		{
+			"name": "Pavel Kozlov",
+			"email": "mail@pkozlov.ru",
+			"url": "https://pkozlov.ru/"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://zenorocha.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/pkozlov/jquery-hypescroll/issues",
+	"homepage": "http://github.com/pkozlov/jquery-hypescroll/",
+	"docs": "https://github.com/pkozlov/jquery-hypescroll#readme",
+	"download": "https://github.com/pkozlov/jquery-hypescroll/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}
