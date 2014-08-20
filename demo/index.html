@@ -3,7 +3,7 @@
 	<head>
 		<title>jQuery HypeScroll</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<script src="../jquery.hypescroll.min.js"></script>
+		<script src="../jquery.hypescroll.js"></script>
 		<style>
 			html, body {
 				height: 100%;
@@ -14,11 +14,15 @@
 	</head>
 	<body>
 		<div id="huement" style="height:100%; background: #ffccff"></div>
-		<div id="element" style="height:100%; background: #ccccff"></div>
+		<div id="element" style="height:100%; background: #ccccff">
+			<div id="hypescroll_hype_container" style="position:relative;overflow:hidden;width:600px;height:400px;margin:0 auto;">
+				<script type="text/javascript" charset="utf-8" src="HypeScroll/HypeScroll.hyperesources/hypescroll_hype_generated_script.js?30253"></script>
+			</div>
+		</div>
 		<script>
 			$(function() {
-				$("#element").hypescroll({
-					
+				$("#hypescroll_hype_container").hypescroll({
+					documentName: 'HypeScroll'
 				});
 			});
 		</script>
