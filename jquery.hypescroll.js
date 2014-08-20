@@ -89,6 +89,8 @@
 			// time per pixel
 			this.tpp = this.duration / (this.height + this.options.offset.end);
 
+			this.onScroll();
+
 			$(window).scroll((function(_this) {
 				return function() {
 					return _this.onScroll();
