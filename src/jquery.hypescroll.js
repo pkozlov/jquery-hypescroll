@@ -8,7 +8,8 @@
 			offset: {
 				start: 0,
 				end: 0
-			}
+			},
+			reversed: false
 		};
 
 	// Constructor
@@ -94,15 +95,18 @@
 		onScroll: function () {
 			var window_offset = this.element.offset().top - $(window).scrollTop() + this.options.offset.end,
 				position, animationPosition;
-
+			console.log(window_offset);
 			if (this.duration && window_offset > this.startpoint && window_offset < this.endpoint) {
 				position = window_offset - this.startpoint;
-				animationPosition = this.duration - (position * this.tpp);
+				animationPosition = position * this.tpp;
+				if (!this.options.reversed) {
+					animationPosition = this.duration - animationPosition;
+				}
 				this.hypeDocument.goToTimeInTimelineNamed(animationPosition, this.options.timeline);
 			} else if (window_offset < this.startpoint) {
-				this.hypeDocument.goToTimeInTimelineNamed(this.duration, this.options.timeline);
+				this.hypeDocument.goToTimeInTimelineNamed(this.options.reversed ? 0 : this.duration, this.options.timeline);
 			} else if (window_offset > this.endpoint) {
-				this.hypeDocument.goToTimeInTimelineNamed(0, this.options.timeline);
+				this.hypeDocument.goToTimeInTimelineNamed(this.options.reversed ? this.duration : 0, this.options.timeline);
 			}
 		}
 	};
